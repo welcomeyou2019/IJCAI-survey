@@ -1,0 +1,28 @@
+\section{Introduction}
+% parsimony learning 是什么
+\textcolor{blue}{what's parsimony learning}\\
+Parsimony Learning, rooted in the principle of achieving “maximum output with minimal input,” represents a transformative approach to addressing the inefficiencies inherent in large language models (LLMs). As LLMs continue to revolutionize natural language understanding and generation, their rapid scaling has introduced significant challenges, including parameter redundancy, architectural inefficiencies, and complexities in contextual reasoning. Parsimony Learning seeks to systematically tackle these issues, optimizing LLMs to be more efficient, scalable, and adaptable without compromising their performance.
+
+% bottlenecks of LLM
+% parameters -> computational cost， decrease the scale of the  model and computational cost
+% ICL -> Optimize the reasoning process and reduce redundant calculations and data dependencies
+% Sturcture -> How to improve computing efficiency and scalability through dynamic computing and sparse structure design is the core challenge
+\textcolor{blue}{bottlenecks of LLM}\\
+Modern LLMs face three primary challenges. 
+First, the extensive parameterization of these models often leads to redundancy, where many parameters contribute minimally to task-specific performance. This redundancy not only inflates computational demands but also complicates task adaptation and transfer learning. 
+Second, the traditional architectures of LLMs, such as fully connected Transformers, struggle with scalability and efficiency, especially when scaled to billions of parameters. Designing architectures that balance dynamic computation, sparse structures, and extensibility remains an open problem. 
+Third, in-context learning, while powerful, encounters significant hurdles in decomposing complex tasks, ensuring knowledge consistency between retrieval and generation, and efficiently handling long contexts without loss of accuracy or reasoning coherence.
+
+\textcolor{blue}{how PL solve the bottlenecks, high-level describe the principle}\\
+Parsimony Learning addresses these challenges through there are complementary dimensions: parameters, architecture, and in-context learning. Parameter optimization focuses on techniques like compression, quantization, and fine-tuning to reduce model size and computational costs while preserving task performance. Architectural innovations, such as Mixture of Experts (MoE), sparse attention mechanisms, and alternative structures, aim to enhance computational efficiency and scalability by rethinking model design. In-context learning optimization employs task decomposition, retrieval-augmented generation (RAG), and dynamic reasoning strategies to improve the efficiency and accuracy of complex task reasoning. Together, these dimensions form a cohesive framework for advancing LLMs toward greater efficiency and adaptability.
+
+\textcolor{blue}{insight}\\
+The principles of Parsimony Learning are grounded in identifying and mitigating inefficiencies within LLMs. Overparameterized models and rigid architectures often lead to diminishing returns as size increases, underscoring the need for targeted optimizations. By aligning methods with theoretical principles, such as prioritizing the most informative parameters and pathways, Parsimony Learning establishes a foundation for efficient LLM development. Furthermore, it distinguishes itself from related approaches by offering a holistic framework that integrates parameter efficiency, architectural innovation, and contextual reasoning optimization, going beyond the scope of sparse low-rank learning, efficient learning, or AutoML.
+
+\textcolor{blue}{how the paper organized}\\
+In this paper, we present Parsimony Learning as a comprehensive solution to the challenges faced by LLMs. By systematically exploring its three core dimensions—parameters, architecture, and in-context learning—we aim to provide a unified perspective on optimizing LLMs for the next generation of efficient and scalable AI systems.
+
+
+% 单独的section介绍为什么分为下面几块
+% future directions
+% transfer learning, GNN, automl

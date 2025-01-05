@@ -1,0 +1,50 @@
+\section{Parsimony Learning in Architecture}
+% Parsimony Learning in Architecture 旨在优化模型的结构设计，以提高效率和性能，解决在大模型发展中因架构冗余、资源消耗过高或扩展性受限而带来的问题。该方法的核心目标是通过合理的架构设计，在不牺牲性能的情况下减少计算和存储需求，从而实现更高效、更实用的模型。根据模型架构优化的不同侧重点，可以将其划分为 专家模型（MoE, Mixture of Experts）、模型压缩（Model Compression） 和 替代架构（Alternative Architecture） 三个主要方向。这种划分的依据在于它们分别聚焦于模型结构的动态计算、规模优化和创新设计，解决了架构优化中的不同问题。
+\textcolor{blue}{what's PL in architecture}\\
+\textcolor{blue}{What problems can it solve?}\\
+\textcolor{blue}{the basis of division}\\
+Parsimony Learning in Architecture aims to optimize model structures to improve efficiency and performance, addressing challenges such as architectural redundancy, high resource consumption, and limited scalability in large models. The primary goal is to design architectures that reduce computational and storage requirements while maintaining or enhancing model performance. Based on different focuses in architectural optimization, this can be categorized into Mixture of Experts (MoE), Model Compression, and Alternative Architectures. This categorization is grounded in their distinct approaches to addressing architectural challenges, namely dynamic computation, structural optimization, and innovative design.
+
+\begin{table}[t]
+\footnotesize
+% \setlength{\abovecaptionskip}{0.2cm}
+\centering
+\tabcolsep=2pt
+\caption{Characteristics for Architecture learning methods on PL.}
+% \vspace{-0.2cm}
+% \resizebox{\textwidth}{!}{
+\begin{tabular}{l|c|c}
+\toprule
+Category &specific characteristics &how they achieve PL \\
+\midrule
+MoE & &\\
+\midrule
+MC & &\\
+\midrule
+AA & & \\
+\bottomrule
+\end{tabular}
+% }
+\label{table4}
+% \vspace{-0.4cm}
+\end{table}
+
+\subsection{Mixture of Experts}
+\textcolor{blue}{what's MoE}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+Mixture of Experts (MoE) focuses on optimizing dynamic computation. Its core idea is to divide a model into different specialized components (“experts”) and activate only a subset of them for specific inputs. This reduces computational costs significantly while maintaining the model’s overall size and capability, as each expert is tailored to specific tasks or data distributions. The strength of MoE lies in its “compute-on-demand” property, which enables efficient resource utilization in large-scale models without sacrificing performance.
+
+\subsection{Model Compression}
+\textcolor{blue}{what's MC}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+Model Compression addresses the challenge of excessive model size and the associated storage and deployment costs. Techniques such as pruning, low-rank decomposition, and knowledge distillation reduce the number of parameters and computational complexity at the architectural level. This approach is based on the observation that many large model architectures contain redundancies that can be efficiently removed or replaced with little impact on performance. By compressing models, they become more adaptable to real-world scenarios, particularly for deployment on resource-constrained devices.
+
+\subsection{Alternative Architectures}
+\textcolor{blue}{what's AA}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+Alternative Architectures emphasize reimagining traditional large model designs to improve efficiency and flexibility. For instance, the Transformer architecture revolutionized sequence modeling by replacing traditional RNNs and CNNs with self-attention mechanisms, significantly enhancing performance. Further innovations, such as sparse attention, low-dimensional embeddings, or adaptive networks, seek to redefine model components and computation pathways, achieving a better balance between performance and efficiency. The key to alternative architectures lies in fundamentally redesigning model structures rather than incrementally optimizing existing ones.
+
+The division of Parsimony Learning in Architecture into MoE, Model Compression, and Alternative Architectures is based on distinct approaches to architectural optimization. MoE enhances computational efficiency by activating only relevant components, Model Compression minimizes redundancy to reduce size and complexity, and Alternative Architectures introduce novel designs to redefine efficiency and adaptability. Together, these directions form a comprehensive framework for optimizing model architectures, enabling the creation of more efficient and lightweight models for diverse applications.

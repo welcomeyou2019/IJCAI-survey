@@ -1,0 +1,50 @@
+\section{Parsimony Learning in Parameters}
+% 参数上的 Parsimony Learning 旨在优化机器学习模型中参数的高效利用，解决模型在存储、内存和计算需求上的高成本问题。其主要目标是在尽可能减少参数数量或提升参数利用效率的同时，保持模型的高性能。这对于在资源受限的环境中（如边缘设备）部署模型，或降低模型训练和推理的总体成本尤为重要。根据对参数使用的关键维度分析，可以将其划分为 蒸馏（Distillation）、微调（Fine-tuning） 和 量化（Quantization） 三个方向。这一划分的依据在于它们分别解决了参数优化中的模型规模压缩、特定任务适配和存储/计算效率提升的问题。
+\textcolor{blue}{what's PL in parameters}\\
+\textcolor{blue}{What problems can it solve?}\\
+\textcolor{blue}{the basis of division}\\
+Parsimony Learning in Parameters focuses on optimizing the parameter efficiency of machine learning models, particularly large language models (LLMs), to address the challenges of high storage, memory, and computational requirements. The primary goal is to achieve high performance while minimizing the number of parameters or making better use of them. This optimization is essential for deploying LLMs in resource-constrained environments, such as edge devices, or when trying to reduce the overall costs associated with training and inference. The categorization into distillation, fine-tuning, and quantization stems from analyzing the critical aspects of parameter usage: reducing model size, adapting pre-trained models to specific tasks, and improving storage/computation efficiency.
+
+\begin{table}[t]
+\footnotesize
+% \setlength{\abovecaptionskip}{0.2cm}
+\centering
+\tabcolsep=2pt
+\caption{Characteristics for Parameters learning methods on PL.}
+% \vspace{-0.2cm}
+% \resizebox{\textwidth}{!}{
+\begin{tabular}{l|c|c}
+\toprule
+Category &specific characteristics &how they achieve PL \\
+\midrule
+PD & &\\
+\midrule
+FT & &\\
+\midrule
+Quantization & & \\
+\bottomrule
+\end{tabular}
+% }
+\label{table4}
+% \vspace{-0.4cm}
+\end{table}
+
+\subsection{Parameters Distillation}
+\textcolor{blue}{what's PD}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+The first dimension, distillation, tackles the problem of large model sizes directly by transferring the knowledge of a large model (teacher) to a smaller model (student). The student model is trained to replicate the behavior of the teacher, retaining essential capabilities while using significantly fewer parameters. This method not only reduces the model size but also helps maintain generalization performance, making it suitable for resource-limited deployment scenarios. Distillation is particularly effective for compressing general-purpose models into smaller, task-specific ones without requiring the full training data.
+
+\subsection{Fine-tuning}
+\textcolor{blue}{what's FT}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+Fine-tuning addresses the adaptability of parameters in pre-trained models. Instead of training a model from scratch, fine-tuning allows for a smaller number of parameters to be optimized on task-specific data, leveraging the vast pre-trained knowledge. This reduces the need for extensive retraining and ensures that only the parameters most relevant to the target task are adjusted. The advantage of fine-tuning lies in its ability to achieve high performance on specific tasks with minimal changes to the pre-trained model, thus saving both time and computational resources.
+
+\subsection{Quantization}
+\textcolor{blue}{what's Quantization}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+Quantization, on the other hand, focuses on improving the storage and computational efficiency of parameters by reducing their precision. By representing parameters with lower-bit formats (e.g., 8-bit integers instead of 32-bit floats), quantization significantly reduces the memory footprint and accelerates computation without substantial loss in model performance. This approach is particularly beneficial for deploying models on hardware with limited storage or computational capacity, such as mobile devices or IoT systems.
+
+The division of Parsimony Learning in Parameters into these three directions—distillation, fine-tuning, and quantization—is based on the specific challenges each method addresses. Distillation focuses on reducing the size of the entire model while maintaining performance, fine-tuning optimizes a subset of parameters for task-specific improvements, and quantization enhances the efficiency of parameter representation for storage and computation. Together, these approaches provide a comprehensive framework for reducing parameter-related overheads while ensuring that models remain effective and adaptable in diverse application scenarios.

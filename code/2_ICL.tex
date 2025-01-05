@@ -1,0 +1,51 @@
+\section{Parsimongy Learning in In-Context Learning}
+% 首先需要明确划分的依据。Parsimony Learning 的核心理念是追求“以最小的资源实现最佳的推理效果”，这要求对推理过程进行深入分析，识别出影响效率和性能的关键环节。具体来说，这种划分的依据在于大语言模型在实际应用中需要平衡以下几个维度：任务的复杂性、知识的获取方式，以及推理的资源消耗。
+\textcolor{blue}{what's PL in ICL}\\
+\textcolor{blue}{What problems can it solve?}\\
+\textcolor{blue}{the basis of division}\\
+Parsimony Learning in ICL aims to enhance the reasoning capabilities of LLMs in a more efficient and streamlined manner, addressing the challenges of high resource consumption and redundant reasoning processes. It emphasizes achieving accurate and effective task completion with minimal inputs and steps, maximizing the potential of the models. To optimize the reasoning efficiency, this approach categorizes the reasoning process based on three key dimensions: task complexity, knowledge acquisition methods, and resource consumption. This categorization identifies the primary bottlenecks in reasoning and provides clear directions for improvement.
+
+\begin{table}[t]
+\footnotesize
+% \setlength{\abovecaptionskip}{0.2cm}
+\centering
+\tabcolsep=2pt
+\caption{Characteristics for ICL methods on PL.}
+% \vspace{-0.2cm}
+% \resizebox{\textwidth}{!}{
+\begin{tabular}{l|c|c}
+\toprule
+Category &specific characteristics &how they achieve PL \\
+\midrule
+Task decomposition & &\\
+\midrule
+RAG & & \\
+\midrule
+KD & &\\
+\bottomrule
+\end{tabular}
+% }
+\label{table4}
+% \vspace{-0.4cm}
+\end{table}
+
+\subsection{Task Decomposition}
+\textcolor{blue}{overview of TD}\\
+\textcolor{blue}{problem formulation}\\
+\textcolor{blue}{how they work: details work (category into data and knowledge driven methods), the same below}\\
+\textcolor{blue}{application}\\
+The complexity of a task determines the difficulty of reasoning, and many complex tasks can be simplified by decomposing them into smaller, more manageable sub-tasks. This forms the foundation of Task Decomposition, which is a natural optimization strategy. By breaking down complex tasks into simpler components, Task Decomposition reduces the overall reasoning complexity and difficulty, enabling the model to tackle problems step-by-step. This not only improves the model’s efficiency but also avoids errors caused by overwhelming complexity.
+
+\subsection{Retrieval-Augmented Generation}
+\textcolor{blue}{what's RAG and overview}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+At the same time, the reasoning performance of LLMs often depends on the knowledge they can access. However, internal knowledge bases are frequently incomplete. Retrieval-Augmented Generation (RAG) addresses this limitation by integrating external retrieval systems, allowing the model to extract relevant information from documents, knowledge graphs, or databases to assist in reasoning. This approach reduces the burden of memorizing all knowledge internally while enabling dynamic and flexible reasoning, especially in scenarios requiring external or real-time knowledge.
+
+\subsection{Knowledge Distillation}
+\textcolor{blue}{what's KD}\\
+\textcolor{blue}{how they work: details work}\\
+\textcolor{blue}{application}\\
+Additionally, resource consumption is a critical bottleneck in the reasoning process, particularly for deploying models in resource-constrained environments. Knowledge Distillation offers a solution by compressing the capabilities of large models into smaller ones or optimizing reasoning strategies to reduce computational costs. This method ensures that smaller models retain essential reasoning capabilities while being more efficient and adaptable to various applications.
+
+These three approaches collectively form the core directions of Parsimony Learning. Task Decomposition focuses on reducing reasoning complexity, Retrieval-Augmented Generation optimizes the efficient use of external knowledge, and Knowledge Distillation aims to minimize resource consumption. By refining task workflows, enabling dynamic knowledge retrieval, and compressing model size, Parsimony Learning embodies the principle of “achieving simplicity without oversimplifying.” This provides a novel perspective and framework for the efficient application of large language models.
